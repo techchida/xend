@@ -45,6 +45,13 @@ class MailSender {
 
             // Connection timeout
             $mail->Timeout = 30;
+            $mail->SMTPKeepAlive = true;
+
+            // Enable debug mode for troubleshooting (log to file)
+            $mail->SMTPDebug = 2;
+            $mail->Debugoutput = function($str, $level) {
+                error_log('[PHPMailer Debug] ' . $str);
+            };
 
             // From
             $mail->setFrom($this->fromEmail, $this->fromName);
