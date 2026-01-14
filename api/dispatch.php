@@ -222,7 +222,7 @@ try {
         ");
 
         $stmt->bind_param(
-            'iisssssssi',
+            'iissssssi',
             $adminId,
             $smtpId,
             $subject,

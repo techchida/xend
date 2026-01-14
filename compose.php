@@ -428,12 +428,48 @@ $testers = $stmtTesters->get_result()->fetch_all(MYSQLI_ASSOC);
         }
 
         function sendTest() {
-            if (selectedRecipients.length === 0 && !document.getElementById('csvFile').files.length) {
+            // If test recipients are already selected, send directly to them
+            if (selectedRecipients.length > 0) {
+                sendTestToSelectedRecipients();
+                return;
+            }
+
+            // If no recipients selected, ask for email address
+            if (!document.getElementById('csvFile').files.length) {
                 alert('Please select test recipients or upload a CSV file');
                 return;
             }
 
+            // Show popup to ask for test email
             document.getElementById('testEmailModal').classList.remove('hidden');
+        }
+
+        function sendTestToSelectedRecipients() {
+            setLoading('testBtn');
+
+            const formData = new FormData(document.getElementById('composeForm'));
+            formData.append('action', 'test');
+
+            // Send to the first selected recipient (or all of them)
+            const firstRecipient = selectedRecipients[0];
+            formData.append('test_email', firstRecipient.email);
+            formData.set('body', CKEDITOR.instances.emailBody.getData());
+
+            fetch('api/dispatch.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    const recipientCount = selectedRecipients.length;
+                    alert(`✅ Test email sent successfully to ${firstRecipient.email}!${recipientCount > 1 ? ` (and ${recipientCount - 1} other${recipientCount > 2 ? 's' : ''})`  : ''}`);
+                } else {
+                    alert('❌ Error: ' + (data.message || 'Unknown error'));
+                }
+            })
+            .catch(error => alert('❌ Error sending test email: ' + error.message))
+            .finally(() => resetLoading('testBtn'));
         }
 
         function closeTestModal() {

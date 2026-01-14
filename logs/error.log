@@ -74,3 +74,23 @@ Stack trace:
 [13-Jan-2026 15:51:26 UTC] Dispatch error: SMTP Error: Could not connect to SMTP host. Failed to connect to server
 [13-Jan-2026 15:51:56 UTC] Mail Send Error: SMTP Error: Could not connect to SMTP host. Failed to connect to server
 [13-Jan-2026 15:51:56 UTC] Dispatch error: SMTP Error: Could not connect to SMTP host. Failed to connect to server
+[14-Jan-2026 10:23:48 UTC] Access denied for user 'christemb_xend'@'localhost' (using password: YES)
+[14-Jan-2026 10:23:48 UTC] Access denied for user 'christemb_xend'@'localhost' (using password: YES)
+[14-Jan-2026 10:24:45 UTC] PHP Deprecated:  fgetcsv(): the $escape parameter must be provided as its default value will change in /Users/user/Documents/GitHub/sendr/api/dispatch.php on line 197
+[14-Jan-2026 10:24:45 UTC] PHP Deprecated:  fgetcsv(): the $escape parameter must be provided as its default value will change in /Users/user/Documents/GitHub/sendr/api/dispatch.php on line 197
+[14-Jan-2026 10:24:45 UTC] PHP Deprecated:  fgetcsv(): the $escape parameter must be provided as its default value will change in /Users/user/Documents/GitHub/sendr/api/dispatch.php on line 197
+[14-Jan-2026 10:24:45 UTC] PHP Fatal error:  Uncaught ArgumentCountError: The number of elements in the type definition string must match the number of bind variables in /Users/user/Documents/GitHub/sendr/api/dispatch.php:224
+Stack trace:
+#0 /Users/user/Documents/GitHub/sendr/api/dispatch.php(224): mysqli_stmt->bind_param('iisssssssi', 1, 1, 'a sample email', 'mailman@christe...', 'ISM', '', '<p>qeaee fqjdnq...', 'sending', 2)
+#1 {main}
+  thrown in /Users/user/Documents/GitHub/sendr/api/dispatch.php on line 224
+[14-Jan-2026 10:24:58 UTC] PHP Deprecated:  fgetcsv(): the $escape parameter must be provided as its default value will change in /Users/user/Documents/GitHub/sendr/api/dispatch.php on line 197
+[14-Jan-2026 10:24:58 UTC] PHP Deprecated:  fgetcsv(): the $escape parameter must be provided as its default value will change in /Users/user/Documents/GitHub/sendr/api/dispatch.php on line 197
+[14-Jan-2026 10:24:58 UTC] PHP Deprecated:  fgetcsv(): the $escape parameter must be provided as its default value will change in /Users/user/Documents/GitHub/sendr/api/dispatch.php on line 197
+[14-Jan-2026 10:24:58 UTC] PHP Fatal error:  Uncaught ArgumentCountError: The number of elements in the type definition string must match the number of bind variables in /Users/user/Documents/GitHub/sendr/api/dispatch.php:224
+Stack trace:
+#0 /Users/user/Documents/GitHub/sendr/api/dispatch.php(224): mysqli_stmt->bind_param('iisssssssi', 1, 1, 'a sample email', 'mailman@christe...', 'ISM', '', '<p>qeaee fqjdnq...', 'sending', 2)
+#1 {main}
+  thrown in /Users/user/Documents/GitHub/sendr/api/dispatch.php on line 224
+[14-Jan-2026 10:25:44 UTC] Mail Send Error: SMTP Error: Could not connect to SMTP host. Failed to connect to server
+[14-Jan-2026 10:25:44 UTC] Dispatch error: SMTP Error: Could not connect to SMTP host. Failed to connect to server
