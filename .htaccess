@@ -4,53 +4,40 @@
 <IfModule mod_rewrite.c>
     RewriteEngine On
     RewriteBase /
-
-    # Redirect non-www to www (optional)
-    # RewriteCond %{HTTP_HOST} !^www\. [NC]
-    # RewriteRule ^(.*)$ http://www.%{HTTP_HOST}/$1 [R=301,L]
-
-    # Remove trailing slashes
-    RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteRule ^(.+)/$ /$1 [R=301,L]
 </IfModule>
 
 # Deny access to sensitive files
 <FilesMatch "\.(env|sql|log|git|md)$">
-    Require all denied
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order Allow,Deny
+        Deny from all
+    </IfModule>
 </FilesMatch>
 
 # Deny access to config files
 <FilesMatch "^(config|database|\.env)\.php$">
-    Require all denied
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order Allow,Deny
+        Deny from all
+    </IfModule>
 </FilesMatch>
 
-# Protect logs directory
-<DirectoryMatch "^.*logs.*">
-    Require all denied
-</DirectoryMatch>
-
-# Set error and index documents
-ErrorDocument 404 /index.php
+# Set index document
 DirectoryIndex index.php
 
 # Security headers (optional but recommended)
 <IfModule mod_headers.c>
     Header set X-Content-Type-Options "nosniff"
     Header set X-Frame-Options "SAMEORIGIN"
-    Header set X-XSS-Protection "1; mode=block"
-    Header set Referrer-Policy "strict-origin-when-cross-origin"
-</IfModule>
-
-# PHP settings (if allowed)
-<IfModule mod_php>
-    php_flag display_errors Off
-    php_flag log_errors On
-    php_value error_log logs/error.log
-    php_value upload_max_filesize 5M
-    php_value post_max_size 5M
 </IfModule>
 
 # Enable Gzip compression
 <IfModule mod_deflate.c>
-    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/json application/x-javascript
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript
 </IfModule>
