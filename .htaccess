@@ -16,21 +16,18 @@
 
 # Deny access to sensitive files
 <FilesMatch "\.(env|sql|log|git|md)$">
-    Order Allow,Deny
-    Deny from all
+    Require all denied
 </FilesMatch>
 
 # Deny access to config files
 <FilesMatch "^(config|database|\.env)\.php$">
-    Order Allow,Deny
-    Deny from all
+    Require all denied
 </FilesMatch>
 
 # Protect logs directory
-<Directory "logs">
-    Order Allow,Deny
-    Deny from all
-</Directory>
+<DirectoryMatch "^.*logs.*">
+    Require all denied
+</DirectoryMatch>
 
 # Set error and index documents
 ErrorDocument 404 /index.php
@@ -45,17 +42,15 @@ DirectoryIndex index.php
 </IfModule>
 
 # PHP settings (if allowed)
-<IfModule mod_php.php>
+<IfModule mod_php>
     php_flag display_errors Off
     php_flag log_errors On
     php_value error_log logs/error.log
-    php_value max_upload_size 5M
+    php_value upload_max_filesize 5M
     php_value post_max_size 5M
 </IfModule>
 
 # Enable Gzip compression
 <IfModule mod_deflate.c>
-    AddOutputFilterByType DEFLATE text/html text/plain text/xml
-    AddOutputFilterByType DEFLATE text/css
-    AddOutputFilterByType DEFLATE text/javascript application/javascript application/x-javascript
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/json application/x-javascript
 </IfModule>
