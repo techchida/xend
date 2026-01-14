@@ -3,9 +3,9 @@
 
 // Database Configuration
 define('DB_HOST', 'localhost');
-define('DB_USER', 'christemb_xend');
-define('DB_PASSWORD', 'Bitmonster11*');
-define('DB_NAME', 'christemb_xend');
+define('DB_USER', 'root');
+define('DB_PASSWORD', '');
+define('DB_NAME', 'mail_dispatch_system');
 
 // Session Configuration
 define('SESSION_TIMEOUT', 3600); // 1 hour in seconds
