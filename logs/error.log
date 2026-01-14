@@ -105,3 +105,5 @@ Stack trace:
 [14-Jan-2026 10:33:21 UTC] PHP Deprecated:  fgetcsv(): the $escape parameter must be provided as its default value will change in /Users/user/Documents/GitHub/sendr/api/dispatch.php on line 197
 [14-Jan-2026 10:33:21 UTC] PHP Deprecated:  fgetcsv(): the $escape parameter must be provided as its default value will change in /Users/user/Documents/GitHub/sendr/api/dispatch.php on line 197
 [14-Jan-2026 10:33:21 UTC] PHP Deprecated:  fgetcsv(): the $escape parameter must be provided as its default value will change in /Users/user/Documents/GitHub/sendr/api/dispatch.php on line 197
+[14-Jan-2026 10:35:30 UTC] Mail Send Error: SMTP Error: Could not connect to SMTP host. Failed to connect to server
+[14-Jan-2026 10:35:30 UTC] Dispatch error: SMTP Error: Could not connect to SMTP host. Failed to connect to server
