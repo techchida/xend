@@ -1,0 +1,76 @@
+[13-Jan-2026 10:45:26 UTC] Unknown database 'mail_dispatch_system'
+[13-Jan-2026 10:45:26 UTC] Unknown database 'mail_dispatch_system'
+[13-Jan-2026 10:53:48 UTC] Mail Send Error: Failed to connect to SMTP server: Operation timed out (60)
+[13-Jan-2026 10:53:48 UTC] Dispatch error: Failed to connect to SMTP server: Operation timed out (60)
+[13-Jan-2026 10:53:58 UTC] Mail Send Error: Failed to connect to SMTP server: Operation timed out (60)
+[13-Jan-2026 10:53:58 UTC] Dispatch error: Failed to connect to SMTP server: Operation timed out (60)
+[13-Jan-2026 10:54:09 UTC] Mail Send Error: Failed to connect to SMTP server: Operation timed out (60)
+[13-Jan-2026 10:54:09 UTC] Dispatch error: Failed to connect to SMTP server: Operation timed out (60)
+[13-Jan-2026 10:54:09 UTC] Dispatch error: No recipients found
+[13-Jan-2026 10:55:44 UTC] PHP Warning:  Undefined array key "from_email" in /Users/user/Documents/GitHub/sendr/compose.php on line 109
+[13-Jan-2026 10:55:44 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/user/Documents/GitHub/sendr/compose.php on line 109
+[13-Jan-2026 11:05:13 UTC] PHP Fatal error:  Uncaught Error: mysqli_stmt::bind_param(): Argument #4 could not be passed by reference in /Users/user/Documents/GitHub/sendr/api/smtp.php:92
+Stack trace:
+#0 {main}
+  thrown in /Users/user/Documents/GitHub/sendr/api/smtp.php on line 92
+[13-Jan-2026 11:05:21 UTC] PHP Fatal error:  Uncaught Error: mysqli_stmt::bind_param(): Argument #4 could not be passed by reference in /Users/user/Documents/GitHub/sendr/api/smtp.php:92
+Stack trace:
+#0 {main}
+  thrown in /Users/user/Documents/GitHub/sendr/api/smtp.php on line 92
+[13-Jan-2026 11:05:44 UTC] PHP Fatal error:  Uncaught Error: mysqli_stmt::bind_param(): Argument #4 could not be passed by reference in /Users/user/Documents/GitHub/sendr/api/smtp.php:92
+Stack trace:
+#0 {main}
+  thrown in /Users/user/Documents/GitHub/sendr/api/smtp.php on line 92
+[13-Jan-2026 11:06:04 UTC] PHP Fatal error:  Uncaught Error: mysqli_stmt::bind_param(): Argument #4 could not be passed by reference in /Users/user/Documents/GitHub/sendr/api/smtp.php:92
+Stack trace:
+#0 {main}
+  thrown in /Users/user/Documents/GitHub/sendr/api/smtp.php on line 92
+[13-Jan-2026 11:10:59 UTC] PHP Fatal error:  Uncaught Error: mysqli_stmt::bind_param(): Argument #4 could not be passed by reference in /Users/user/Documents/GitHub/sendr/api/smtp.php:92
+Stack trace:
+#0 {main}
+  thrown in /Users/user/Documents/GitHub/sendr/api/smtp.php on line 92
+[13-Jan-2026 11:11:08 UTC] PHP Fatal error:  Uncaught Error: mysqli_stmt::bind_param(): Argument #4 could not be passed by reference in /Users/user/Documents/GitHub/sendr/api/smtp.php:92
+Stack trace:
+#0 {main}
+  thrown in /Users/user/Documents/GitHub/sendr/api/smtp.php on line 92
+[13-Jan-2026 11:11:28 UTC] PHP Fatal error:  Uncaught Error: mysqli_stmt::bind_param(): Argument #4 could not be passed by reference in /Users/user/Documents/GitHub/sendr/api/smtp.php:92
+Stack trace:
+#0 {main}
+  thrown in /Users/user/Documents/GitHub/sendr/api/smtp.php on line 92
+[13-Jan-2026 11:13:27 UTC] PHP Fatal error:  Uncaught ArgumentCountError: The number of elements in the type definition string must match the number of bind variables in /Users/user/Documents/GitHub/sendr/api/smtp.php:98
+Stack trace:
+#0 /Users/user/Documents/GitHub/sendr/api/smtp.php(98): mysqli_stmt->bind_param('ssisssiii', 'Mailman', 'smtp.office365....', 586, 'mailman@christe...', 'YqzHmoTuD6KA', 'mailman@christe...', '', 1, 1, 1)
+#1 {main}
+  thrown in /Users/user/Documents/GitHub/sendr/api/smtp.php on line 98
+[13-Jan-2026 11:13:42 UTC] PHP Fatal error:  Uncaught ArgumentCountError: The number of elements in the type definition string must match the number of bind variables in /Users/user/Documents/GitHub/sendr/api/smtp.php:98
+Stack trace:
+#0 /Users/user/Documents/GitHub/sendr/api/smtp.php(98): mysqli_stmt->bind_param('ssisssiii', 'Mailman', 'smtp.office365....', 586, 'mailman@christe...', 'YqzHmoTuD6KA', 'mailman@christe...', '', 1, 1, 1)
+#1 {main}
+  thrown in /Users/user/Documents/GitHub/sendr/api/smtp.php on line 98
+[13-Jan-2026 11:14:40 UTC] PHP Warning:  Undefined array key "from_email" in /Users/user/Documents/GitHub/sendr/compose.php on line 109
+[13-Jan-2026 11:14:40 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/user/Documents/GitHub/sendr/compose.php on line 109
+[13-Jan-2026 11:16:11 UTC] Dispatch error: Required fields are missing
+[13-Jan-2026 11:16:32 UTC] Mail Send Error: Failed to connect to SMTP server: Operation timed out (60)
+[13-Jan-2026 11:16:32 UTC] Dispatch error: Failed to connect to SMTP server: Operation timed out (60)
+[13-Jan-2026 11:16:42 UTC] Mail Send Error: Failed to connect to SMTP server: Operation timed out (60)
+[13-Jan-2026 11:16:42 UTC] Dispatch error: Failed to connect to SMTP server: Operation timed out (60)
+[13-Jan-2026 11:16:45 UTC] Dispatch error: Required fields are missing
+[13-Jan-2026 11:17:11 UTC] Dispatch error: Required fields are missing
+[13-Jan-2026 11:17:32 UTC] Dispatch error: Required fields are missing
+[13-Jan-2026 11:18:47 UTC] Dispatch error: Required fields are missing
+[13-Jan-2026 11:19:44 UTC] Dispatch error: Required fields are missing
+[13-Jan-2026 11:20:16 UTC] Dispatch error: Required fields are missing{"subject":"a sample email","smtpId":1,"fromEmail":"","body":"<p>This is a samople mail jkdefbjwkf<\/p>\r\n"}
+[13-Jan-2026 11:21:15 UTC] Dispatch error: No recipients found
+[13-Jan-2026 11:21:36 UTC] Mail Send Error: Failed to connect to SMTP server: Operation timed out (60)
+[13-Jan-2026 11:21:36 UTC] Dispatch error: Failed to connect to SMTP server: Operation timed out (60)
+[13-Jan-2026 11:25:36 UTC] Dispatch error: No recipients found
+[13-Jan-2026 11:26:09 UTC] Mail Send Error: Failed to connect to SMTP server: Operation timed out (60)
+[13-Jan-2026 11:26:09 UTC] Dispatch error: Failed to connect to SMTP server: Operation timed out (60)
+[13-Jan-2026 14:14:36 UTC] PHP Warning:  Undefined array key "from_email" in /Users/user/Documents/GitHub/sendr/compose.php on line 109
+[13-Jan-2026 14:14:36 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/user/Documents/GitHub/sendr/compose.php on line 109
+[13-Jan-2026 14:14:51 UTC] Mail Send Error: Invalid address:  (From): 
+[13-Jan-2026 14:14:51 UTC] Dispatch error: Invalid address:  (From): 
+[13-Jan-2026 15:51:26 UTC] Mail Send Error: SMTP Error: Could not connect to SMTP host. Failed to connect to server
+[13-Jan-2026 15:51:26 UTC] Dispatch error: SMTP Error: Could not connect to SMTP host. Failed to connect to server
+[13-Jan-2026 15:51:56 UTC] Mail Send Error: SMTP Error: Could not connect to SMTP host. Failed to connect to server
+[13-Jan-2026 15:51:56 UTC] Dispatch error: SMTP Error: Could not connect to SMTP host. Failed to connect to server
