@@ -256,13 +256,19 @@ try {
                 continue;
             }
 
+            // Prepare variables for binding
+            $title = $recipient['title'] ?? null;
+            $fname = $recipient['fname'];
+            $lname = $recipient['lname'];
+            $email = $recipient['email'];
+
             $stmt->bind_param(
                 'issss',
                 $dispatchId,
-                $recipient['title'] ?? null,
-                $recipient['fname'],
-                $recipient['lname'],
-                $recipient['email']
+                $title,
+                $fname,
+                $lname,
+                $email
             );
 
             if ($stmt->execute()) {
